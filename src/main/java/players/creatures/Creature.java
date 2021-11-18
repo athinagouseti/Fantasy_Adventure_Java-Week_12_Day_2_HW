@@ -2,7 +2,7 @@ package players.creatures;
 
 import rooms.enemies.Enemy;
 
-public class Creature implements ICreatureActions{
+public abstract class Creature implements ICreatureActions{
     private int healthPoints;
 
     public Creature(int healthPoints) {

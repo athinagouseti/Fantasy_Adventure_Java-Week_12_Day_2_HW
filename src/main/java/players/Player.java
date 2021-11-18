@@ -1,6 +1,7 @@
 package players;
 
 import rooms.Treasure;
+import rooms.TreasureRoom;
 
 import java.util.ArrayList;
 
@@ -11,6 +12,7 @@ public abstract class Player {
     public Player(int healthPoints) {
         this.healthPoints = healthPoints;
         this.chest = new ArrayList<>();
+
     }
 
     public  int getHealthPoints(){
@@ -19,5 +21,13 @@ public abstract class Player {
 
     public void setHealthPoints(int healthPoints) {
         this.healthPoints = healthPoints;
+    }
+
+    public int getChest() {
+        return this.chest.size();
+    }
+
+    public void receiveTreasure(Treasure treasure) {
+        this.chest.add(treasure);
     }
 }

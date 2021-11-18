@@ -23,4 +23,6 @@ public class Barbarian extends Player implements IFight{
     public Weapons changeWeapon(Weapons weapon) {
         return this.weapon = weapon;
     }
+
+
 }

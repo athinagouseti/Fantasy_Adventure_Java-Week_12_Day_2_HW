@@ -2,6 +2,7 @@ package players.dbk;
 
 import org.junit.Before;
 import org.junit.Test;
+import rooms.Treasure;
 import rooms.enemies.Orc;
 
 import static org.junit.Assert.assertEquals;
@@ -44,5 +45,11 @@ public class BarbarianTest {
     public void canFight(){
         barbarian.fight(orc);
         assertEquals(80, orc.getHealthPoints() );
+    }
+
+    @Test
+    public void canReceiveTreasure(){
+        barbarian.receiveTreasure(Treasure.GEMS);
+        assertEquals(1, barbarian.getChest());
     }
 }
